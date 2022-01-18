@@ -4,7 +4,6 @@ import { CreateMenuService } from "../services/CreateMenuService";
 export class CreateMenuController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { name, realatedId } = request.body;
-    console.log("realatedId", realatedId);
     const service = new CreateMenuService();
     const result = await service.execute({ name, realatedId });
 

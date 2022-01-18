@@ -16,7 +16,7 @@ export class Menu {
   name: string;
 
   @Column()
-  realatedId: Date;
+  realatedId: string;
 
   //   @OneToMany(() => Menu)
   //   @JoinColumn({ name: "realatedId" })
