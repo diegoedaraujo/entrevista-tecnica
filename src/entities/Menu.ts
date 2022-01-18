@@ -1,11 +1,4 @@
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  OneToMany,
-  PrimaryColumn,
-} from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
 @Entity("menus")
@@ -19,10 +12,9 @@ export class Menu {
   @Column()
   realatedId: string;
 
-  //TODO relations
-  // @OneToMany((type) => Menu, (menu) => menu.id)
-  // @JoinColumn({ name: "realatedId" })
-  // submenus: Menu;
+  @ManyToOne(() => Menu)
+  @JoinColumn({ name: "realatedId" })
+  submenu: Menu;
 
   constructor() {
     if (!this.id) {
