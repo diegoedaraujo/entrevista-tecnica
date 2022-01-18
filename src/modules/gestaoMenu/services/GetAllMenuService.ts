@@ -5,7 +5,7 @@ export class GetAllMenuService {
   async execute(): Promise<Menu[]> {
     const repo = getRepository(Menu);
     const menus = await repo.find({
-      relations: ["submenu"],
+      relations: ["submenus"],
     });
     return menus;
   }

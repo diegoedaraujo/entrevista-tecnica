@@ -14,7 +14,7 @@ export class Menu {
 
   @ManyToOne(() => Menu)
   @JoinColumn({ name: "realatedId" })
-  submenu: Menu;
+  submenus: Menu;
 
   constructor() {
     if (!this.id) {
