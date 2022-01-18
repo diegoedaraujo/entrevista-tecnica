@@ -16,6 +16,9 @@ export class Menu {
   @JoinColumn({ name: "realatedId" })
   submenus: Menu;
 
+  //TODO
+  //Criar relations OneToMany
+
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
