@@ -15,6 +15,9 @@ export class CreateMenuService {
     if (await repo.findOne({ name })) {
       return new Error("O name informada já foi cadastrado!");
     }
+    if (!name) {
+      return new Error("O name deve ser informado!");
+    }
 
     const menu = repo.create({ name, realatedId });
     await repo.save(menu);

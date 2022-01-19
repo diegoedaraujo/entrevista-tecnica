@@ -15,6 +15,7 @@ export class CreateMenu1642535112045 implements MigrationInterface {
             name: "name",
             type: "varchar",
             isUnique: true,
+            isNullable: false,
           },
           {
             name: "realatedId",
